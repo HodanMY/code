@@ -1,19 +1,14 @@
-print("Welcome to your Horoscope Online!\nPlease complete the following questions.")
+print("Welcome to your Horoscope Online!")
+
+name = input("\nWhat is your name? :")
+
+print( "Hi " + name.title() + "\nPlease complete the following questions.")
 
 
 while True: 
         day = int(input("\nWhat day were you born? i.e 1-30: "))
         month = input("What month were you born in? i.e May, July etc: ").lower()
-
-        def earth_sign():
-            print("Your zodiac element is Earth")
-        def water_sign():
-            print("Your zodiac element is Water")
-        def air_sign():
-            print("Your zodiac element is Air")
-        def fire_sign():
-            print("Your zodiac element is Fire")
-
+            
 
         cancer = "Cancer"
         scorpio = "Scorpio"
@@ -73,26 +68,31 @@ while True:
                               
         elif month == 'november':
                                 star_sign = scorpio if (day < 22) else sagittarius
-                               
-                               
-            
+
+        
+
+
+        def zodiac_element(x):
+                print("\nYour zodiac element is " + x
 
         print("Your Astrological Sign is " + star_sign)
 
-        if star_sign == 'capricorn' or 'taurus' or 'virgo' :
-            earth_sign()
-        elif star_sign == 'cancer' or 'scorpio' or 'pisces':
-            water_sign()
-        elif star_sign == 'leo' or 'aires' or 'sagittarius':
-            fire_sign()
-        elif star_sign == 'gemini' or 'libra' or 'aquarius' :
-            air_sign()
 
-
+        if star_sign == [capricorn, taurus, virgo]:
+                zodiac_element(earth)
+            
+        elif star_sign == [cancer, scorpio, pisces]:
+                zodiac_element(water)
+            
+        elif star_sign == [leo, aries, sagittarius]:
+                 zodiac_element(fire)
+            
+        elif star_sign == [gemini, libra, aquarius]:
+                zodiac_element(air) 
 
         restart = input("Would you like to try again? (y/n)")
 
         if restart == 'y':
-            continue 
+                continue 
         elif restart == 'n':
-            break
+                break 
