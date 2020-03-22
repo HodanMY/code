@@ -7,6 +7,9 @@ print( "Hi " + name.title() + "\nPlease complete the following questions.")
 
 while True: 
         day = int(input("\nWhat day were you born? i.e 1-30: "))
+        if len(day) > 32:
+                print ("Error! Please enter a number between 1 - 31")
+                sys.exit()
         month = input("What month were you born in? i.e May, July etc: ").lower()
             
 
